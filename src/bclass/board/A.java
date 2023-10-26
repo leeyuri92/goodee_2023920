@@ -6,8 +6,9 @@ public class A {
 		i=10;
 	}
 	public A(int i) {
-		// this(); 예약어로 호출 가능
+		this(); //예약어로 호출 가능
 	}
+	public A(int a, int b) {}
 	
 	void methodA() {}
 	// 해당 메소드 내에서만 유지됨 - 메소드 영역을 벗어나면유지되지 않음

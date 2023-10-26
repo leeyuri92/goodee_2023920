@@ -32,14 +32,11 @@ public class Student {
 		this.s_name = s_name;
 		this.grade = grade;
 	}
-
 	public static void main(String[] args) {
 		Student stu = new Student(9954307, "나신입", 3);
 	
 		System.out.println(stu.getS_no());
 		System.out.println(stu.getS_name());
 		System.out.println(stu.getGrade());
-
 	}
-
 }

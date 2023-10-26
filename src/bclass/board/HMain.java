@@ -1,6 +1,5 @@
 package bclass.board;
-class H{
-	
+class H{	
 	int i;	
 	private static H h = new H();  // 이른 인스턴스화
 	private H() {
@@ -11,12 +10,9 @@ class H{
 	}
 }
 public class HMain {
-
 	public static void main(String[] args) {
 		H h = H.getInstance();
 		H h2 = H.getInstance();
 		System.out.println(h +", "+ h2);
-
 	}
-
 }
