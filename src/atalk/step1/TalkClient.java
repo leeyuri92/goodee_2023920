@@ -49,6 +49,7 @@ public class TalkClient extends JFrame implements ActionListener {
 	JScrollPane jsp_display = null;
 	public TalkClient() {  // 이건 언제 호출되는거지?
 		jtf_msg.addActionListener(this);
+		jbtn_send.addActionListener(this);
 		jbtn_exit.addActionListener(this);
 		jbtn_change.addActionListener(this);
 	}
@@ -92,8 +93,8 @@ public class TalkClient extends JFrame implements ActionListener {
 	public void init() {
 		try {
 			//서버측의 ip주소 작성하기
-			socket = new Socket("127.0.0.1",3002);  
-			//socket = new Socket("172.16.2.11",3002);  
+			//socket = new Socket("127.0.0.1",1004);  
+			socket = new Socket("172.16.2.11",1004);  
 			oos = new ObjectOutputStream(socket.getOutputStream());
 			ois = new ObjectInputStream(socket.getInputStream());
 			//initDisplay에서 닉네임이 결정된 후 init메소드가 호출되므로
@@ -111,8 +112,16 @@ public class TalkClient extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent ae) {
 		Object obj = ae.getSource();
 		String msg = jtf_msg.getText();
-		if(jbtn_one == obj) {
-			
+		if(jbtn_send == obj) {
+//			try {
+//				oos.writeObject(201
+//						+"#"+nickName
+//						+"#"+msg);
+//				jta_display.setText(msg);
+//				
+//			} catch (Exception e) {
+//			
+//			}
 		}
 		else if(jtf_msg==obj) {
 			try {

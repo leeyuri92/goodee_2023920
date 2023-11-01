@@ -15,10 +15,10 @@ public class LeeClientThread extends Thread {
 		boolean isStop = false;
 		while(!isStop) {
 			try {
-				String msg = "";//100#apple
+				String msg = "";    //100#apple
 				msg = (String)tc.ois.readObject();
 				StringTokenizer st = null;
-				int protocol = 0;//100|200|201|202|500
+				int protocol = 0;  //100|200|201|202|500
 				if(msg !=null) {
 					st = new StringTokenizer(msg,"#");
 					protocol = Integer.parseInt(st.nextToken());//100
