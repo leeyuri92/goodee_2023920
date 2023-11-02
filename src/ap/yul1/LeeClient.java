@@ -1,5 +1,4 @@
 package ap.yul1;
-
 import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -93,23 +92,30 @@ public class LeeClient extends JFrame implements ActionListener{
 		Object obj = ae.getSource();
 		String msg = jtf_msg.getText();
 		
-		if(obj == jtf_msg) {
-			try {
-				oos.writeObject(200 + "," + nickname + "," + msg);
-				jtf_msg.setText("");
-				jta_display.setText(msg);
-				//jtf_msg.setText(msg);
-			} catch (Exception e) {
-				System.out.println(e.toString());
-			}			
-		}else if (obj == jbtn_send) {
+		if((obj == jtf_msg) ||(obj == jbtn_send)) {
 			try {
 				oos.writeObject(200 + "," + nickname + "," + msg);
 				jtf_msg.setText("");				
-				
+//				
+//				oos.writeObject(200 + "," + nickname + "," + msg);
+//				jtf_msg.setText("");
+//				jta_display.setText(msg);
+//				//jtf_msg.setText(msg);
 			} catch (Exception e) {
 				System.out.println(e.toString());
-			}			
-		}		
+			}
+		}
 	}
 }
+//			}			
+//		}else if (obj == jbtn_send) {
+//			try {
+//				oos.writeObject(200 + "," + nickname + "," + msg);
+////				jtf_msg.setText("");				
+////				
+//			} catch (Exception e) {
+//				System.out.println(e.toString());
+//			}			
+//		}		
+//	}
+//}
